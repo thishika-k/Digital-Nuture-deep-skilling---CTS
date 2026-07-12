@@ -1,0 +1,163 @@
+/* ---------- Global Reset ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ---------- Body ---------- */
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f4f6f9;
+
+    color:#333;
+
+    line-height:1.6;
+
+}
+
+/* ---------- Header ---------- */
+
+header{
+
+    background:#1f4e79;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+/* ---------- Navigation ---------- */
+
+nav{
+
+    background:#163d61;
+
+}
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+nav ul{
+
+    list-style:none;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    display:block;
+
+    padding:15px 0;
+
+}
+
+nav a:hover{
+
+    color:#ffd54f;
+
+}
+
+/* ---------- Main ---------- */
+
+main{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:30px auto;
+
+}
+
+section{
+
+    background:white;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    border-radius:8px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+
+}
+
+section h2{
+
+    margin-bottom:10px;
+
+    color:#1f4e79;
+
+}
+
+section ul{
+
+    margin-left:20px;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+
+    background:#1f4e79;
+
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+
+}
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width:768px){
+
+    nav ul{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    main{
+
+        width:95%;
+
+    }
+
+    header{
+
+        padding:20px;
+
+    }
+
+}
