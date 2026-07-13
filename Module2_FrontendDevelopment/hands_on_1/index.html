@@ -4,70 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Student Portal</title>
-
     <meta name="description"
-        content="Student Portal for managing courses, announcements, and student information.">
+        content="Student Portal for managing courses, announcements and academic information.">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 
 <body>
 
+    <!-- Header -->
+
     <header>
-        <h1>Student Portal</h1>
-        <p>Manage Courses, Students and Announcements</p>
+
+        <h2>Student Portal</h2>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">Courses</a></li>
+
+                <li><a href="#">Students</a></li>
+
+                <li><a href="#">Announcements</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Students</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Hero Section -->
 
-    
-<main>
+    <section id="hero">
 
-    <section>
-        <h2>Welcome to Student Portal</h2>
+        <h1>Welcome to Student Portal</h1>
 
         <p>
-            This portal helps students manage courses,
-            announcements and academic information.
+            Manage your courses, grades, attendance and academic progress
+            from one place.
         </p>
-    </section>
 
-    <section>
-
-        <h2>Quick Links</h2>
-
-        <ul>
-
-            <li>View Courses</li>
-
-            <li>Check Attendance</li>
-
-            <li>View Results</li>
-
-            <li>Download Study Materials</li>
-
-        </ul>
+        <button>Explore Courses</button>
 
     </section>
 
+    <!-- Student Statistics -->
 
-    </main>
+    <section class="stats">
+
+        <div class="stat-item">
+            <h3>3</h3>
+            <p>Courses Enrolled</p>
+        </div>
+
+        <div class="stat-item">
+            <h3>3.8</h3>
+            <p>Current GPA</p>
+        </div>
+
+        <div class="stat-item">
+            <h3>6</h3>
+            <p>Current Semester</p>
+        </div>
+
+    </section>
+
+    <!-- Courses -->
+
+    <section id="courses">
+
+        <h2>Available Courses</h2>
+
+        <div class="course-grid">
+
+            <article class="course-card">
+
+                <h3>Data Structures</h3>
+
+                <p>
+                    Learn arrays, linked lists, stacks,
+                    queues and trees.
+                </p>
+
+                <span>4 Credits</span>
+
+            </article>
+
+            <article class="course-card">
+
+                <h3>Database Management Systems</h3>
+
+                <p>
+                    Learn SQL, normalization and
+                    relational databases.
+                </p>
+
+                <span>3 Credits</span>
+
+            </article>
+
+            <article class="course-card">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Build responsive websites using
+                    HTML, CSS and JavaScript.
+                </p>
+
+                <span>4 Credits</span>
+
+            </article>
+
+            <article class="course-card">
+
+                <h3>Operating Systems</h3>
+
+                <p>
+                    Learn process management,
+                    memory management and scheduling.
+                </p>
+
+                <span>4 Credits</span>
+
+            </article>
+
+            <article class="course-card">
+
+                <h3>Computer Networks</h3>
+
+                <p>
+                    Understand networking,
+                    routing and communication protocols.
+                </p>
+
+                <span>3 Credits</span>
+
+            </article>
+
+            <article class="course-card">
+
+                <h3>Artificial Intelligence</h3>
+
+                <p>
+                    Introduction to Machine Learning,
+                    Neural Networks and AI concepts.
+                </p>
+
+                <span>4 Credits</span>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
 
     <footer>
-        <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
-    </footer>
 
+        <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+
+    </footer>
 
 </body>
 

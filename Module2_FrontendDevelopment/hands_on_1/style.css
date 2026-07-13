@@ -1,4 +1,6 @@
-/* ---------- Global Reset ---------- */
+/* ===========================
+   CSS RESET
+=========================== */
 
 *{
     margin:0;
@@ -6,73 +8,54 @@
     box-sizing:border-box;
 }
 
-/* ---------- Body ---------- */
+/* ===========================
+   BODY
+=========================== */
 
 body{
-
     font-family:Arial, Helvetica, sans-serif;
-
-    background:#f4f6f9;
-
+    background:#f4f7fb;
     color:#333;
-
     line-height:1.6;
-
 }
 
-/* ---------- Header ---------- */
+/* ===========================
+   HEADER
+=========================== */
 
 header{
-
     background:#1f4e79;
-
     color:white;
+    padding:20px 40px;
 
-    text-align:center;
-
-    padding:25px;
-
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
-
-/* ---------- Navigation ---------- */
-
-nav{
-
-    background:#163d61;
-
-}
-
+/* ===========================
+   NAVIGATION
+=========================== */
 nav ul{
-
-    list-style:none;
 
     display:flex;
 
-    justify-content:center;
-
-}
-
-nav ul{
-
     list-style:none;
-
-    display:flex;
-
-    justify-content:center;
 
     gap:30px;
+
+    align-items:center;
 
 }
 
 nav a{
 
-    color:white;
-
     text-decoration:none;
 
-    display:block;
+    color:white;
 
-    padding:15px 0;
+    font-weight:bold;
+
+    transition:.3s;
 
 }
 
@@ -82,82 +65,345 @@ nav a:hover{
 
 }
 
-/* ---------- Main ---------- */
+/* ===========================
+   HERO SECTION
+=========================== */
+#hero{
 
-main{
+    display:flex;
 
-    width:90%;
+    flex-direction:column;
 
-    max-width:1000px;
+    align-items:center;
 
-    margin:30px auto;
+    justify-content:center;
 
-}
+    text-align:center;
 
-section{
+    padding:80px 20px;
 
-    background:white;
-
-    padding:20px;
-
-    margin-bottom:20px;
-
-    border-radius:8px;
-
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    background:linear-gradient(135deg,#dbeafe,#eef5ff);
 
 }
 
-section h2{
-
-    margin-bottom:10px;
+#hero h1{
 
     color:#1f4e79;
 
-}
-
-section ul{
-
-    margin-left:20px;
+    margin-bottom:20px;
 
 }
 
-/* ---------- Footer ---------- */
+#hero p{
 
-footer{
+    max-width:700px;
+
+    margin-bottom:25px;
+
+}
+
+#hero button{
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:6px;
 
     background:#1f4e79;
 
     color:white;
 
-    text-align:center;
-
-    padding:15px;
+    cursor:pointer;
 
 }
 
-/* ---------- Responsive Design ---------- */
+#hero button:hover{
 
-@media (max-width:768px){
+    background:#163d61;
+
+}
+
+/* ===========================
+   COURSES
+=========================== */
+
+/* =======================
+   COURSES
+======================= */
+
+#courses{
+
+    padding:60px 40px;
+
+}
+
+#courses h2{
+
+    text-align:center;
+
+    color:#1f4e79;
+
+    margin-bottom:40px;
+
+}
+
+/* =======================
+   CSS GRID
+======================= */
+
+.course-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+/* =======================
+   COURSE CARD
+======================= */
+
+.course-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.course-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.course-card h3{
+
+    color:#1f4e79;
+
+    margin-bottom:15px;
+
+}
+
+.course-card p{
+
+    margin-bottom:20px;
+
+    color:#555;
+
+}
+
+.course-card span{
+
+    display:inline-block;
+
+    background:#1f4e79;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#1f4e79;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:40px;
+}
+
+.stats{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:40px;
+
+    background:white;
+
+}
+
+.stat-item{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:20px;
+
+    border-radius:8px;
+
+    background:#f4f7fb;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
+
+}
+
+.stat-item h3{
+
+    color:#1f4e79;
+
+    font-size:30px;
+
+}
+
+.stat-item p{
+
+    margin-top:8px;
+
+    color:#555;
+
+}
+@media(max-width:768px){
 
     nav ul{
-
         flex-direction:column;
-
-        align-items:center;
-
     }
 
-    main{
-
-        width:95%;
-
+    .course-grid{
+        grid-template-columns:1fr;
     }
 
-    header{
-
-        padding:20px;
-
+    .stats{
+        flex-direction:column;
     }
+
+    form{
+        width:100%;
+    }
+
+}
+
+/* ==========================
+   REGISTRATION FORM
+========================== */
+
+#registration{
+
+    padding:60px 40px;
+
+}
+
+#registration h2{
+
+    text-align:center;
+
+    color:#1f4e79;
+
+    margin-bottom:35px;
+
+}
+
+form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:20px;
+
+}
+
+.form-group label{
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#1f4e79;
+
+    box-shadow:0 0 6px rgba(31,78,121,.25);
+
+}
+
+form button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    background:#1f4e79;
+
+    color:white;
+
+    font-size:17px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+form button:hover{
+
+    background:#163d61;
 
 }
