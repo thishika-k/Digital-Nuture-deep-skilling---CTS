@@ -1,0 +1,22 @@
+# Ignore Python virtual environments
+**/env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtual Environment
+env/
+venv/
+.venv/
+
+# Django
+db.sqlite3
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
