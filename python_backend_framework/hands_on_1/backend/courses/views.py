@@ -10,6 +10,9 @@ from rest_framework.permissions import IsAuthenticated
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 class DepartmentListCreateAPIView(generics.ListCreateAPIView):
     queryset = Department.objects.all()
     serializer_class = DepartmentSerializer
@@ -71,3 +74,17 @@ class EnrollmentRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIVi
     queryset = Enrollment.objects.all()
     serializer_class = EnrollmentSerializer
     permission_classes = [IsAuthenticated]
+
+class DashboardAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        data = {
+            "departments": Department.objects.count(),
+            "courses": Course.objects.count(),
+            "students": Student.objects.count(),
+            "enrollments": Enrollment.objects.count(),
+        }
+        return Response(data)
+
+    
