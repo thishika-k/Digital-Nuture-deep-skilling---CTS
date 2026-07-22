@@ -13,7 +13,17 @@ class DepartmentListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = DepartmentSerializer
 
 
+class DepartmentRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+
+
 class CourseListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
+
+
+class CourseRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 
@@ -23,6 +33,16 @@ class StudentListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = StudentSerializer
 
 
+class StudentRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+
 class EnrollmentListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Enrollment.objects.all()
+    serializer_class = EnrollmentSerializer
+
+
+class EnrollmentRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Enrollment.objects.all()
     serializer_class = EnrollmentSerializer
