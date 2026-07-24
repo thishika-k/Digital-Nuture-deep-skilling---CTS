@@ -13,6 +13,8 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from django.shortcuts import get_object_or_404
+
 class DepartmentListCreateAPIView(generics.ListCreateAPIView):
     queryset = Department.objects.all()
     serializer_class = DepartmentSerializer
@@ -85,6 +87,23 @@ class DashboardAPIView(APIView):
             "students": Student.objects.count(),
             "enrollments": Enrollment.objects.count(),
         }
+        return Response(data)
+
+class DepartmentStatisticsAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, pk):
+        department = get_object_or_404(Department, pk=pk)
+
+        data = {
+            "department": department.name,
+            "total_courses": Course.objects.filter(department=department).count(),
+            "total_students": Student.objects.filter(department=department).count(),
+            "total_enrollments": Enrollment.objects.filter(
+                course__department=department
+            ).count(),
+        }
+
         return Response(data)
 
     
